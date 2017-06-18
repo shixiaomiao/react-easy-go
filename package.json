@@ -1,0 +1,29 @@
+{
+  "name": "react-easy-go",
+  "version": "1.0.0",
+  "description": "react scaffold",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "easy": "bin/easy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shixiaomiao/react-easy-go.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shixiaomiao/react-easy-go/issues"
+  },
+  "homepage": "https://github.com/shixiaomiao/react-easy-go#readme",
+  "devDependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.9.0",
+    "eslint": "^4.0.0"
+  }
+}

@@ -1,0 +1,50 @@
+#! /usr/bin/env node --harmony
+'use strict'
+// 定义脚手架的文件路径
+process.env.NODE_PATH = __dirname + '/../node_modules/';
+const program = require('commander');
+
+// 定义当前版本
+program.version(require('../package.json').version)
+
+// 定义使用方法
+program.usage('<command>');
+
+// 处理四种不同的命令
+// 增加一个新文件
+program.command('add')
+		.description('Add a new templte')
+		.alias('a')
+		.action(() => {
+		  require('../command/add')()
+		})
+
+	// 列出所有的可能
+program.command('list')
+		.description('List all the templates')
+		.alias('l')
+		.action(() => {
+		  require('../command/list')()
+		})
+
+	// 初始化项目
+program.command('init')
+		.description('Generate a new project')
+		.alias('i')
+		.action(() => {
+		  require('../command/init')()
+		})
+
+// 删除一种模式
+program.command('delete')
+	.description('Delete a template')
+	.alias('d')
+	.action(() => {
+		require('../command/delete')()
+	})
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+		program.help();
+}
